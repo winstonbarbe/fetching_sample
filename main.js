@@ -3,6 +3,7 @@ import onLogin from "./modules/login.js";
 import onLogout from "./modules/logout.js";
 import onUpload from "./modules/upload.js";
 import onPageLoad from "./modules/pageLoad.js";
+import chooseVideo from "./modules/videoSelect.js";
 // import { populateList } from "./modules/library.js";
 
 const signup = document.querySelector("#signup");
@@ -15,6 +16,7 @@ const videoUpload = document.querySelector("#upload");
 
 
 videoUpload.addEventListener("submit", onUpload);
+videosList.addEventListener("click", chooseVideo);
 
 signup.addEventListener("submit", onSignup);
 login.addEventListener("submit", onLogin);
