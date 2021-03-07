@@ -6,9 +6,9 @@ function onUpload (e) {
 
   fetch("http://localhost:3000/api/videos", {
     method: "POST",
-    // headers: {
-    //   "Content-Type ": "multipart/form-data"
-    // },
+    headers: {
+      "Authorization": `Bearer ${localStorage.getItem("jwt")}`
+    },
     body: formData
   })
     .then(response => response.json())
