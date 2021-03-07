@@ -15,10 +15,7 @@ function onUpload (e) {
     .then(response => response.json())
     .then(data => {
       console.log(data);
-      const videos = localStorage.getItem("videos");
-      console.log(videos.json());
-      populateStorage(videos);
-      populateList(videos);
+      populateList(data.videos.map(video => video.url), document.querySelector("#videos"));
       this.reset();
     })
   ;

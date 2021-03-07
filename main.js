@@ -9,8 +9,8 @@ const signup = document.querySelector("#signup");
 const login = document.querySelector("#login");
 const logout = document.querySelector(".logout");
 const videosList = document.querySelector("#videos");
-const userVideos = JSON.parse(localStorage.getItem("videos")) || [];
 const videoUpload = document.querySelector("#upload");
+// const userVideos = JSON.parse(localStorage.getItem("videos")) || [];
 
 
 

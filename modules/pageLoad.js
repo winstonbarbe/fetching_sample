@@ -8,9 +8,12 @@ function onPageLoad(videosList) {
   })
     .then(response => response.json())
     .then(data => {
+      console.log(data);
       populateList(data.videos.map(video => video.url), videosList);
     })
     .catch(err => console.log(err));
 }
+
+
 
 export default onPageLoad;

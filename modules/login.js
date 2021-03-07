@@ -21,9 +21,9 @@ function onLogin(e) {
       }
     })
     .then(data => {
+      console.log(data);
       const links = data.user.videos.map(video => video.url);
       localStorage.setItem("jwt", data.jwt);
-      populateStorage(links);
       populateList(links, document.querySelector("#videos"));
     })
     .catch(err => console.log(err.statusText));
