@@ -1,6 +1,7 @@
+import { populateList, populateStorage } from "./library.js";
+
 function onUpload (e) {
   e.preventDefault();
-  console.log(e);
   const formData = new FormData();
   formData.append("body", e.target[0].files[0]);
 
@@ -12,7 +13,14 @@ function onUpload (e) {
     body: formData
   })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => {
+      console.log(data);
+      const videos = localStorage.getItem("videos");
+      console.log(videos.json());
+      populateStorage(videos);
+      populateList(videos);
+      this.reset();
+    })
   ;
 }
 

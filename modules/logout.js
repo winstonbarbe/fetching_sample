@@ -1,5 +1,3 @@
-
-
 function onLogout(e) {
   localStorage.removeItem("jwt");
   localStorage.removeItem("videos");
