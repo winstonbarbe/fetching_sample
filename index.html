@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetching Sample</title>
+  </head>
+  <body>
+    <!-- Sign up -->
+    <div class="signup">
+      <h4>Signup</h4>
+      <form id="signup">
+        <label for="signup-name">Name:</label>
+        <input type="text" name="signup-name" id="signup-name" />
+        <br />
+        <label for="signup-email">Email:</label>
+        <input type="text" name="signup-email" id="signup-email" />
+        <br />
+        <label for="signup-password">Password:</label>
+        <input type="password" name="signup-password" id="signup-password" />
+        <br />
+        <label for="signup-password-confirmation">Password Confirmation:</label>
+        <input
+          type="password"
+          name="signup-password-confirmation"
+          id="signup-password-confirmation"
+        />
+        <br />
+        <button type="submit" id="on-signup">Signup</button>
+      </form>
+    </div>
+    <!-- Sign up end -->
+
+    <!-- Login -->
+    <div class="login">
+      <h4>Login</h4>
+      <form id="login">
+        <label for="login-email">Email:</label>
+        <input type="text" name="login-email" id="login-email" />
+        <br />
+        <label for="login-password">Password:</label>
+        <input type="password" name="login-password" id="login-password" />
+        <br />
+        <button type="submit" id="on-login">Login</button>
+      </form>
+    </div>
+    <br />
+    <!-- Login end -->
+
+    <!-- Logout -->
+    <div class="logout">
+      <button id="on-logout">Logout</button>
+    </div>
+    <br />
+    <!-- Logout end -->
+
+    <!-- Video Upload -->
+    <div class="upload">
+      <form id="upload">
+        <input type="file" name="file" id="file" />
+        <button type="submit" id="on-upload">Upload</button>
+      </form>
+    </div>
+    <!-- Video Upload end -->
+
+    <!-- Video Library -->
+    <div class="video-library">
+      <h4>Video Library</h4>
+      <ul id="videos"></ul>
+    </div>
+    <!-- Video Library end -->
+
+    <!-- scripts -->
+    <!-- <script src="signup.js"></script>
+    <script src="login.js"></script>
+    <script src="logout.js"></script> -->
+    <script type="module" src="main.js"></script>
+    <!-- scripts end -->
+  </body>
+</html>
