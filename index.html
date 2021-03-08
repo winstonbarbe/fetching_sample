@@ -19,6 +19,11 @@
           <h1>GVP</h1>
         </div>
         <!-- / EndNav Header -->
+        <!-- Logout -->
+        <div class="logout nav-element">
+          <h4 id="on-logout">Logout</h4>
+        </div>
+        <!-- Logout end -->
 
         <!-- Login -->
         <div class="dropdown login nav-element">
@@ -131,19 +136,24 @@
         <div class="column sidebar">
           <!-- Side Bar Nav -->
           <div class="sidebar-nav">
-            <div class="sidebar-nav-header"><h4>Library</h4></div>
-            <!-- Upload -->
-            <div class="upload">
-              <span>Upload</span>
+            <div class="sidebar-nav-header">
+              <h4>Library</h4>
+              <!-- Video Upload -->
+              <div class="upload">
+                <form id="upload">
+                  <input type="file" name="file" id="file" />
+                  <!-- <button type="submit" id="on-upload" class="btn">Upload</button> -->
+                </form>
+              </div>
+              <!-- Video Upload end -->
             </div>
-
-            <!-- / End Upload -->
           </div>
           <!--/ EndSide Bar Nav -->
-
           <!-- Library -->
           <div class="library">
-            <span>Library</span>
+            <div class="videos">
+              <ul id="videos"></ul>
+            </div>
           </div>
 
           <!-- End Library -->
