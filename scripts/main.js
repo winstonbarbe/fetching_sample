@@ -24,7 +24,7 @@ logout.addEventListener("click", onLogout);
 
 if (localStorage.getItem("jwt")) {
   onPageLoad(videosList);
-}
+} 
 
 
 

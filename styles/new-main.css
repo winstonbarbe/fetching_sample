@@ -1,20 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2b2b2b;
+}
+
+.wrapper {
+  font-family: monospace;
+  position: relative;
+}
+
+/* FONT */
+h1 {
+  font-size: 80px;
+}
+h4 {
+  font-size: 40px;
+}
+label,
+input {
+  font-size: 18px;
+}
+
+/* Button */
+
+.btn {
+  border: 2px solid #2b2b2b;
+  background-color: #f2f2f2;
+  color: #2b2b2b;
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border: 2px solid #2b2b2b;
+  background-color: #2b2b2b;
+  color: #f2f2f2;
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav {
+  box-shadow: 0px 4px 9px #0085cd;
+  background-color: #f2f2f2;
+  color: #2b2b2b;
+  display: block;
+  position: fixed;
+  padding: 12px;
+  width: 100%;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.nav-header {
+  display: inline-block;
+}
+
+.nav-element {
+  position: relative;
+  float: right;
+  margin: 12px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 10px;
+  background-color: #f2f2f2;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px #2b2b2b80;
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.main {
+  position: relative;
+  content: "";
+  display: table;
+  clear: both;
+  width: 100%;
+  top: 132px;
+  padding: 0 8px;
+}
+
+.column {
+  float: left;
+}
+
+/* Video Player */
+
 .player {
-  max-width: 900px;
   border: 5px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  /* padding: 0 15px; */
+  width: 70%;
+  /* max-width: 900px; */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   font-size: 0;
   overflow: hidden;
-}
-
-/* This css is only applied when fullscreen is active. */
-.player:fullscreen {
-  max-width: none;
-  width: 100%;
-}
-
-.player:-webkit-full-screen {
-  max-width: none;
-  width: 100%;
 }
 
 .player__video {
@@ -82,9 +176,6 @@
   flex: 0;
   flex-basis: 50%;
 }
-
-/* unholy css to style input type="range" */
-
 input[type="range"] {
   -webkit-appearance: none;
   background: transparent;
@@ -138,4 +229,33 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 50px;
   background: #ffc600;
   cursor: pointer;
+}
+
+.sidebar {
+  border: 5px solid red;
+  width: 30%;
+  float: right;
+}
+
+.sidebar-nav {
+  border: 5px solid indigo;
+}
+
+.sidebar-nav-header {
+  border: 5px solid yellow;
+  /* display: inline-block; */
+  float: left;
+}
+
+.upload {
+  border: 5px solid green;
+  /* display: inline-block; */
+}
+
+.library {
+  border: 5px solid orange;
+}
+
+span {
+  color: #f2f2f2;
 }
