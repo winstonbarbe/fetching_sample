@@ -9,6 +9,7 @@ function upload(e) {
   formData.append('file', file);
   formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
  
+  // eslint-disable-next-line no-undef
   axios({
     url: CLOUDINARY_URL,
     method: 'POST',
