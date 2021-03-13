@@ -1,4 +1,5 @@
-import { populateList, populateStorage } from "./library.js";
+import { populateList} from "./library.js";
+import sessionChange from "./sessionChange.js";
 
 function onLogin(e) {
   e.preventDefault();
@@ -25,6 +26,7 @@ function onLogin(e) {
       const links = data.user.videos.map(video => video.url);
       localStorage.setItem("jwt", data.jwt);
       populateList(links, document.querySelector("#videos"));
+      sessionChange();
     })
     .catch(err => console.log(err.statusText));
   this.reset();
