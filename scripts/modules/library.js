@@ -5,11 +5,12 @@ function populateStorage(links) {
 function populateList(vids = [], list) {
   list.innerHTML = vids.map((vid, i) => {
     return `
-      <li>
+      <li class="">
         <video data-index=${i} id="video${i}" src="${vids[i]}"></video>
       </li>
     `;
   }).join("");
 }
+
 
 export { populateStorage, populateList };

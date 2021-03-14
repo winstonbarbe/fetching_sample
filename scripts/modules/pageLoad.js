@@ -14,6 +14,4 @@ function onPageLoad(videosList) {
     .catch(err => console.log(err));
 }
 
-
-
 export default onPageLoad;

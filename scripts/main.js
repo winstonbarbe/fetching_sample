@@ -5,7 +5,7 @@ import onUpload from "./modules/upload.js";
 import onPageLoad from "./modules/pageLoad.js";
 import chooseVideo from "./modules/videoSelect.js";
 
-// Not Logged In Modules
+// Session Dependent Actions
 import uploadToView from "./modulesNotLogged/uploadToView.js";
 
 const signup = document.querySelector("#signup");
@@ -17,11 +17,16 @@ const videosList = document.querySelector("#videos");
 const videoUpload = document.querySelector("#upload");
 const player = document.querySelector(".player");
 
+// Session Independent 
 player.classList.replace("hidden_player", "visible_player");
 
+// Session Dependent 
 videoUpload.addEventListener("change", localStorage.getItem("jwt") ? onUpload : uploadToView);
+
+// Active Session Actions
 videosList.addEventListener("click", chooseVideo);
 
+// Session Actions
 signup.addEventListener("submit", onSignup);
 login.addEventListener("submit", onLogin);
 logout.addEventListener("click", onLogout);
