@@ -73,6 +73,26 @@ input {
 
 .hidden {
   visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+
+.hidden_player {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1.5s, opacity 1.5s linear;
+}
+
+.visible_player {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1.5s linear;
 }
 
 .dropdown-content {

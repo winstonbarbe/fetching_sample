@@ -1,4 +1,4 @@
-function upload(e) {
+function uploadToView(e) {
   e.preventDefault();
   const CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/crowdpleaser/video/upload';
   const CLOUDINARY_UPLOAD_PRESET = 'kvcunjt8';
@@ -27,4 +27,4 @@ function upload(e) {
   });
 }
 
-export default upload;
+export default uploadToView;

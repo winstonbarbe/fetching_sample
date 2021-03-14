@@ -6,17 +6,20 @@ import onPageLoad from "./modules/pageLoad.js";
 import chooseVideo from "./modules/videoSelect.js";
 
 // Not Logged In Modules
-import upload from "./modulesNotLogged/upload.js";
+import uploadToView from "./modulesNotLogged/uploadToView.js";
 
 const signup = document.querySelector("#signup");
+const signupDisplay = document.querySelector(".signup");
 const login = document.querySelector("#login");
+const loginDisplay = document.querySelector(".login");
 const logout = document.querySelector(".logout");
 const videosList = document.querySelector("#videos");
 const videoUpload = document.querySelector("#upload");
+const player = document.querySelector(".player");
 
+player.classList.replace("hidden_player", "visible_player");
 
-
-videoUpload.addEventListener("change", localStorage.getItem("jwt") ? onUpload : upload);
+videoUpload.addEventListener("change", localStorage.getItem("jwt") ? onUpload : uploadToView);
 videosList.addEventListener("click", chooseVideo);
 
 signup.addEventListener("submit", onSignup);
@@ -24,8 +27,16 @@ login.addEventListener("submit", onLogin);
 logout.addEventListener("click", onLogout);
 
 if (localStorage.getItem("jwt")) {
+  loginDisplay.classList.replace("visible", "hidden");
+  signupDisplay.classList.replace("visible", "hidden");
+  logout.classList.replace("hidden", "visible");
   onPageLoad(videosList);
+} else {
+  loginDisplay.classList.replace("hidden", "visible");
+  signupDisplay.classList.replace("hidden", "visible");
+  logout.classList.replace("visible", "hidden");
 } 
+
 
 
 
